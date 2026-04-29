@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neon-cyan: #22d3ee;
+  --color-neon-pink: #ec4899;
+  --color-dark-bg: #050505;
+}
+
+@layer base {
+  body {
+    @apply bg-dark-bg text-white font-sans overflow-hidden select-none;
+  }
+}
+
+@layer utilities {
+  .neon-shadow-cyan {
+    box-shadow: 0 0 15px rgba(34, 211, 238, 0.4), 0 0 30px rgba(34, 211, 238, 0.1);
+  }
+  .neon-shadow-pink {
+    box-shadow: 0 0 15px rgba(236, 72, 153, 0.4), 0 0 30px rgba(236, 72, 153, 0.1);
+  }
+  .neon-text-cyan {
+    text-shadow: 0 0 10px rgba(34, 211, 238, 0.8);
+  }
+  .neon-text-pink {
+    text-shadow: 0 0 10px rgba(236, 72, 153, 0.8);
+  }
+  .grid-bg {
+    background-image: radial-gradient(var(--color-neon-cyan) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+}
+
